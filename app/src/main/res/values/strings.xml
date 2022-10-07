@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CardFormula</string>
+    <string name="choose_complex">Выберите уровень сложности:</string>
+    <string name="complex1">1-4 класс</string>
+    <string name="complex2">5-9 класс</string>
+    <string name="complex3">10-11 класс</string>
+    <string name="complex4">1-2 курс</string>
+    <string name="back_btn">Назад</string>
+</resources>
