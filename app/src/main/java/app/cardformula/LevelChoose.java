@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class LevelChoose extends AppCompatActivity implements View.OnClickListener{
 
     private String complexity;
@@ -23,21 +25,22 @@ public class LevelChoose extends AppCompatActivity implements View.OnClickListen
         textView.setText(complexity);
 
         final Button back_btn = findViewById(R.id.lvl_choose_back_btn);
-        back_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        back_btn.setOnClickListener(v -> finish());
 
-        findViewById(R.id.lvl1_btn).setOnClickListener(this);
-        findViewById(R.id.lvl2_btn).setOnClickListener(this);
-        findViewById(R.id.lvl3_btn).setOnClickListener(this);
-        findViewById(R.id.lvl4_btn).setOnClickListener(this);
-        findViewById(R.id.lvl5_btn).setOnClickListener(this);
-        findViewById(R.id.lvl6_btn).setOnClickListener(this);
-        findViewById(R.id.lvl7_btn).setOnClickListener(this);
-        findViewById(R.id.lvl8_btn).setOnClickListener(this);
+        ArrayList<Button> buttons = new ArrayList<>();
+
+        buttons.add(findViewById(R.id.lvl1_btn));
+        buttons.add(findViewById(R.id.lvl2_btn));
+        buttons.add(findViewById(R.id.lvl3_btn));
+        buttons.add(findViewById(R.id.lvl4_btn));
+        buttons.add(findViewById(R.id.lvl5_btn));
+        buttons.add(findViewById(R.id.lvl6_btn));
+        buttons.add(findViewById(R.id.lvl7_btn));
+        buttons.add(findViewById(R.id.lvl8_btn));
+
+        for (int i = 0; i < 8; i++) {
+            buttons.get(i).setOnClickListener(this);
+        }
     }
 
     @Override

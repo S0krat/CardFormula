@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="complex1_level1">
+    <string-array name="lvl1_1">
         <item>+</item>
         <item>1</item>
         <item>3</item>
         <item>2</item>
         <item>=</item>
     </string-array>
-    <string-array name="complex1_level2">
+    <string-array name="lvl1_2">
         <item>-</item>
         <item>7</item>
         <item>3</item>
@@ -15,7 +15,7 @@
         <item>=</item>
         <item>4</item>
     </string-array>
-    <string-array name="complex2_level1">
+    <string-array name="lvl2_1">
         <item>5</item>
         <item>=</item>
         <item>1</item>
@@ -24,11 +24,22 @@
         <item>6</item>
         <item>0</item>
     </string-array>
-    <string-array name="complex2_level2">
+    <string-array name="lvl2_2">
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>8</item>
+        <item>*</item>
+        <item>=</item>
+        <item>(</item>
+        <item>)</item>
+        <item>+</item>
+    </string-array>
+    <string-array name="lvl2_3">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>9</item>
         <item>*</item>
         <item>=</item>
         <item>(</item>

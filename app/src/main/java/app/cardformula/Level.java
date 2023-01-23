@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -23,6 +24,7 @@ public class Level extends AppCompatActivity implements View.OnTouchListener {
     private ArrayList<Point> allowedPoints;
     private ArrayList<Card> board;
     private Card ghostCard;
+    private String levelName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +50,6 @@ public class Level extends AppCompatActivity implements View.OnTouchListener {
 
         back_btn.setOnClickListener(v -> finish());
 
-//        char[] char_eq = "2+3=4".toCharArray();
-//        if (Calculator.Compare(char_eq)) {
-//            Toast toast = Toast.makeText(getApplicationContext(),
-//                    "Все получилось!", Toast.LENGTH_SHORT);
-//            toast.show();
-//        } else {
-//            Toast toast = Toast.makeText(getApplicationContext(),
-//                    "Не получилось(((((((((", Toast.LENGTH_SHORT);
-//            toast.show();
-//        }
-
-
         back_btn.setLayoutParams(layoutParams);
         constraintLayout.addView(back_btn);
         // Взятие аргументов предыдущей activity
@@ -67,23 +57,7 @@ public class Level extends AppCompatActivity implements View.OnTouchListener {
         String level = arguments.getString("level");
         String complexity = arguments.getString("complex");
         // Создание строки - полное название уровня
-        String levelName = "complex";
-        switch (complexity) {
-            case "1-4 класс":
-                levelName += "1_level";
-                break;
-            case "5-9 класс":
-                levelName += "2_level";
-                break;
-            case "10-11 класс":
-                levelName += "3_level";
-                break;
-            case "1-2 курс":
-                levelName += "4_level";
-                break;
-        }
-        levelName += level;
-        // Создание массива карточек
+        levelName = "lvl" + complexity + "_" + level;
         String[] cards = getResources().getStringArray
                 (getResources().getIdentifier(levelName, "array", this.getPackageName()));
         cardsNum = cards.length;

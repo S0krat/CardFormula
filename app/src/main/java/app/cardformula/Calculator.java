@@ -1,6 +1,5 @@
 package app.cardformula;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Calculator {
